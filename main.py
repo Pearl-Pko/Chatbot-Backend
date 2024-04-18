@@ -2,25 +2,26 @@ from joblib import load
 from tokenizer import tokenize_and_stem
 import json 
 import random
+from flask import Flask, request
+
+app = Flask(__name__)
 
 #loads the necessary data 
 pipeline = load("model.joblib")
 with open("data.json", "r") as file:
     intents = json.loads(file.read())   
+intent_ids = list(zip(intents.keys(), intents.values()))
 
+@app.route("/reply", methods=["POST"])
 def main():
-    intent_ids = list(zip(intents.keys(), intents.values()))
-    # print(intent_ids)
-    while True: 
-        user_input = input("User: ")
-        
-        intent_id = pipeline.predict([user_input])[0]
-        intent = intent_ids[intent_id]
-        intent_tag = intent[0]
-        print(intent_tag)
-        intent_res = intent[1]
-        
-        res = random.choice(intent_res)
-        print(f"AI: {res}")
+    user_input = request.json["message"]        
+    intent_id = pipeline.predict([user_input])[0]
+    intent = intent_ids[intent_id]
+    intent_tag = intent[0]
+    intent_res = intent[1]
+    
+    res = random.choice(intent_res)
+    return {"message": res}
 
-main()
+if __name__ == '__main__':
+    app.run(debug=True)
