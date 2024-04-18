@@ -17,6 +17,7 @@ def main():
         intent_id = pipeline.predict([user_input])[0]
         intent = intent_ids[intent_id]
         intent_tag = intent[0]
+        print(intent_tag)
         intent_res = intent[1]
         
         res = random.choice(intent_res)
