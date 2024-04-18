@@ -3,8 +3,11 @@ from tokenizer import tokenize_and_stem
 import json 
 import random
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app)
 
 #loads the necessary data 
 pipeline = load("model.joblib")
@@ -14,7 +17,8 @@ intent_ids = list(zip(intents.keys(), intents.values()))
 
 @app.route("/reply", methods=["POST"])
 def main():
-    user_input = request.json["message"]        
+    user_input = request.json["message"]    
+    print(user_input)    
     intent_id = pipeline.predict([user_input])[0]
     intent = intent_ids[intent_id]
     intent_tag = intent[0]
