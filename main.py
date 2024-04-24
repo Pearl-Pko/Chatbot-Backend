@@ -5,6 +5,16 @@ from flask import Flask, request
 from flask_cors import CORS
 from nltk import word_tokenize
 from nltk.stem.lancaster import LancasterStemmer
+from joblib import register_store_backend
+
+class DummyBackend:
+    def put(self, key, value):
+        pass  # Do nothing
+
+    def get(self, key):
+        return None  # Return None for any key
+
+register_store_backend('dummy', DummyBackend)
 
 # Custom tokenizer function that tokenizes and stems the text
 def tokenize_and_stem(text):
