@@ -1,13 +1,22 @@
 from joblib import load 
-from tokenizer import tokenize_and_stem
 import json 
 import random
 from flask import Flask, request
 from flask_cors import CORS
+from nltk import word_tokenize
+from nltk.stem.lancaster import LancasterStemmer
+
+# Custom tokenizer function that tokenizes and stems the text
+def tokenize_and_stem(text):
+    tokens = word_tokenize(text)
+    stemmed_tokens = [stemmer.stem(token) for token in tokens]
+    return stemmed_tokens
 
 app = Flask(__name__)
 
 CORS(app)
+
+stemmer = LancasterStemmer()
 
 #loads the necessary data 
 pipeline = load("model.joblib")
