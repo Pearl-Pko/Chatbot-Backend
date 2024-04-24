@@ -1,5 +1,4 @@
 from joblib import load 
-from tokenizer import *
 import json 
 import random
 from flask import Flask, request
