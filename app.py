@@ -1,5 +1,5 @@
 from joblib import load 
-from tokenizer import tokenize_and_stem
+from tokenizer import *
 import json 
 import random
 from flask import Flask, request
@@ -28,4 +28,4 @@ def main():
     return {"message": res}
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
