@@ -5,16 +5,45 @@ from flask import Flask, request
 from flask_cors import CORS
 from nltk import word_tokenize
 from nltk.stem.lancaster import LancasterStemmer
-from joblib import register_store_backend
+from joblib.memory import register_store_backend
+from joblib._store_backends import StoreBackendBase
 
-class DummyBackend:
-    def put(self, key, value):
-        pass  # Do nothing
+class DummyStoreBackend(StoreBackendBase):
+    """A dummy store backend that does nothing."""
 
-    def get(self, key):
-        return None  # Return None for any key
+    def _open_item(self, *args, **kwargs):
+        """Open an item on store."""
+        "Does nothing"
 
-register_store_backend('dummy', DummyBackend)
+    def _item_exists(self, location):
+        """Check if an item location exists."""
+        "Does nothing"
+
+    def _move_item(self, src, dst):
+        """Move an item from src to dst in store."""
+        "Does nothing"
+
+    def create_location(self, location):
+        """Create location on store."""
+        "Does nothing"
+
+    def exists(self, obj):
+        """Check if an object exists in the store"""
+        return False
+
+    def clear_location(self, obj):
+        """Clear object on store"""
+        "Does nothing"
+
+    def get_items(self):
+        """Returns the whole list of items available in cache."""
+        return []
+
+    def configure(self, location, *args, **kwargs):
+        """Configure the store"""
+        "Does nothing"
+
+register_store_backend("local", DummyStoreBackend)
 
 # Custom tokenizer function that tokenizes and stems the text
 def tokenize_and_stem(text):
