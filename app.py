@@ -4,8 +4,11 @@ import random
 from converse import ResponseGeneratorFactory
 from flask import Flask, request
 from flask_cors import CORS
+import nltk
 
 app = Flask(__name__)
+
+nltk.download('punkt')
 
 CORS(app)
 
