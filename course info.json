@@ -1,20 +1,20 @@
 {
-    "courses": [
-        {
+    "courses": {
+        "phy109": {
             "name": "Practical Physics 1",
             "code": "PHY109",
             "description": "In this course, students engage in a minimum of 22 major experiments covering various aspects of the physics curriculum for the year.",
             "status": "Core",
             "credits": 3
         },
-        {
+        "phy111": {
             "name": "Classical Mechanics",
             "code": "PHY111",
             "description": "In this course, students engage in a minimum of 22 major experiments covering various aspects of the physics curriculum for the year.",
             "status": "Core",
             "credits": 3
         },
-        {
+        "csc110": {
             "name": "Introduction to Computing",
             "code": "CSC110", 
             "description": "This course provides a comprehensive introduction to the world of computing. Students delve into the history of computers, understanding the functional components of a computer, and the characteristics that define them. The curriculum covers problem-solving strategies, flowcharts, algorithms, and explores the societal impact of computing technologies, addressing social, ethical, and professional considerations.",
@@ -22,7 +22,7 @@
             "credits": 3,
             "prerequisites": []
         },
-        {
+        "csc111": {
             "name": "Programming Essentials", 
             "code": "CSC111",
             "description": "Programming Essentials is a foundational course that introduces students to system description techniques, including flowcharts, algorithms, and data flow diagrams. It explores the BASIC programming language, covering statements, symbolic names, arrays, and control statements. The course also serves as an initiation into Visual BASIC Programming Language.",
@@ -30,7 +30,7 @@
             "credits": 3,
             "prerequisites": []
         },
-        {
+        "csc120": {
             "name": "Use of Packages",
             "code": "CSC120",
             "description": "In this course, students gain insights into the aims and objectives of computer packages, understanding their structure, applications, and limitations. The practical sessions involve hands-on experience with popular packages in areas such as spreadsheet, word processing, database management, and design applications.",
@@ -38,7 +38,7 @@
             "credits": 3,
             "prerequisites": []
         }, 
-        {
+        "csc211": {
             "name": "Structured Programming in PASCAL",
             "code": "CSC211",
             "description": "CSC211 is Structured Programming in PASCAL. It delves into the foundations of structured programming, covering declarations, data types, and programming operations. Students explore the intricacies of PASCAL, including strings, pointers, list processing, and file handling.",
@@ -46,142 +46,145 @@
             "credits": 3,
             "prerequisites": ["CSC110", "100 level Maths"]
         }
-    ],
-    "department": [
-        {
+    },
+    "department": {
+        "physics": {
             "name": "Physics",
             "hod": "Professor Osahon",
             "courses": {
-                "100 level": {
-                    "first semester": ["PHY109", "PHY111", "PHY113", "PHY124", "GST111", "GST112", "MTH112", "MTH110", "CHM111", "CHM113", "AEB111", "CSC110"],
-                    "second semester": ["PHY109", "PHY124", "GST121", "GST122", "GST123", "MTH123", "MTH125", "CHM122", "CHM124", "AEB123"]
+                "100": {
+                    "first": ["PHY109", "PHY111", "PHY113", "PHY124", "GST111", "GST112", "MTH112", "MTH110", "CHM111", "CHM113", "AEB111", "CSC110"],
+                    "second": ["PHY109", "PHY124", "GST121", "GST122", "GST123", "MTH123", "MTH125", "CHM122", "CHM124", "AEB123"]
                 },
-                "200 level": {
-                    "first semester":  ["PHY209", "PHY211", "PHY212", "PHY213", "PHY214", "PHY215", "MTH123", "PHY219", "PHY217", "MTH212", "PHY232", "MTH218", "MTH219", "AEB211", "CHM205", "CHM211"],
-                    "second semester": ["PHY215", "PHY223", "PHY224", "PHY226", "PHY229", "MTH227", "MTH223", "CSC213", "CHM205", "CHM221", "AEB201"]
+                "200": {
+                    "first":  ["PHY209", "PHY211", "PHY212", "PHY213", "PHY214", "PHY215", "MTH123", "PHY219", "PHY217", "MTH212", "PHY232", "MTH218", "MTH219", "AEB211", "CHM205", "CHM211"],
+                    "second": ["PHY215", "PHY223", "PHY224", "PHY226", "PHY229", "MTH227", "MTH223", "CSC213", "CHM205", "CHM221", "AEB201"]
                 },
-                "300 level": {
-                    "first semester": ["PHY309", "PHY311", "PHY332", "PHY323", "PHY314", "PHY315", "PHY316", "PHY317", "PHY318", "PHY319", "PHY331", "PHY334", "PHY335", "PHY336", "PHY399", "CED300", "MTH336"],
-                    "second semester": ["Industrial Training"]
+                "300": {
+                    "first": ["PHY309", "PHY311", "PHY332", "PHY323", "PHY314", "PHY315", "PHY316", "PHY317", "PHY318", "PHY319", "PHY331", "PHY334", "PHY335", "PHY336", "PHY399", "CED300", "MTH336"],
+                    "second": ["Industrial Training"]
                 },
-                "400 level": {
-                    "first semester": ["PHY412", "PHY414", "PHY415", "PHY416", "PHY418", "MTH418", "PHY499"],
-                    "second semester": ["PHY421", "PHY423", "PHY424", "PHY422", "PHY426", "PHY427", "PHY428", "PHY429", "PHY438", "PHY435", "PHY499"]
+                "400": {
+                    "first": ["PHY412", "PHY414", "PHY415", "PHY416", "PHY418", "MTH418", "PHY499"],
+                    "second": ["PHY421", "PHY423", "PHY424", "PHY422", "PHY426", "PHY427", "PHY428", "PHY429", "PHY438", "PHY435", "PHY499"]
                 }
             
             }
         },
-        {
+        "computer science": {
             "name": "Computer Science",
             "hod": "Professor Egwali A. O.",
             "courses": {
-                "100 level": {
-                    "first semester": ["CSC110", "MTH110", "MTH112", "PHY111", "CHM111", "GST111", "GST112", "CSC111", "BUS111", "PHY109", "PHY113"],
-                    "second semester": ["CSC120", "MTH123", "MTH125", "PHY124", "GST121", "GST122", "GST123", "CHM122", "BUS121"]
+                "100": {
+                    "first": ["CSC110", "MTH110", "MTH112", "PHY111", "CHM111", "GST111", "GST112", "CSC111", "BUS111", "PHY109", "PHY113"],
+                    "second": ["CSC120", "MTH123", "MTH125", "PHY124", "GST121", "GST122", "GST123", "CHM122", "BUS121"]
                 },
-                "200 level": {
-                    "first semester": ["CSC211", "CSC212", "MTH230", "MTH219", "CSC217", "BUS211", "CSC237"],
-                    "second semester": ["CSC222", "CSC220", "PHY224", "MTH227", "CSC224", "MTH229", "BUS221"]
+                "200": {
+                    "first": ["CSC211", "CSC212", "MTH230", "MTH219", "CSC217", "BUS211", "CSC237"],
+                    "second": ["CSC222", "CSC220", "PHY224", "MTH227", "CSC224", "MTH229", "BUS221"]
                 },
-                "300 level": {
-                    "first semester": ["CSC313", "CSC316", "CSC318", "MTH317", "CSC314", "CSC311", "CSC312", "CSC333", "CED300", "CSC328", "CSC325", "CSC321", "CSC323"],
-                    "second semester": ["Industrial Training"]
+                "300": {
+                    "first": ["CSC313", "CSC316", "CSC318", "MTH317", "CSC314", "CSC311", "CSC312", "CSC333", "CED300", "CSC328", "CSC325", "CSC321", "CSC323"],
+                    "second": ["Industrial Training"]
                 },
-                "400 level": {
-                    "first semester": ["CSC419", "CSC411", "CSC418", "CSC432", "CSC413", "CSC415", "CSC412", "CSC414", "CSC416", "CSC439"],
-                    "second semester": ["CSC499", "CSC421", "CSC422", "CSC427", "CSC428", "CSC424", "CSC426"]
+                "400": {
+                    "first": ["CSC419", "CSC411", "CSC418", "CSC432", "CSC413", "CSC415", "CSC412", "CSC414", "CSC416", "CSC439"],
+                    "second": ["CSC499", "CSC421", "CSC422", "CSC427", "CSC428", "CSC424", "CSC426"]
                 }
             }
         },
-        {
+        "geology": {
             "name": "Geology",
             "hod": "Dr. Salami S. A.", 
             "courses": {
-                "100 level": {
-                    "first semester": ["GLY110", "CHM111", "MTH112", "PHY111", "AEB111", "GST111", "GST112", "GST121", "GST123"],
-                    "second semester": ["GLY120", "CHM122", "CHM113", "MTH123", "PHY113", "AEB122", "GST122", "BOT111"]
+                "100": {
+                    "first": ["GLY110", "CHM111", "MTH112", "PHY111", "AEB111", "GST111", "GST112", "GST121", "GST123"],
+                    "second": ["GLY120", "CHM122", "CHM113", "MTH123", "PHY113", "AEB122", "GST122", "BOT111"]
                 }, 
-                "200 level": {
-                    "first semester": ["GLY200", "GLY210", "GLY211", "GLY212", "GLY221", "CSC211", "CHM205", "MTH219"],
-                    "second semester": ["GLY201", "GLY222", "CSC212", "PHY212", "PHY211", "AEB211", "CHM221", "PHY215"]
+                "200": {
+                    "first": ["GLY200", "GLY210", "GLY211", "GLY212", "GLY221", "CSC211", "CHM205", "MTH219"],
+                    "second": ["GLY201", "GLY222", "CSC212", "PHY212", "PHY211", "AEB211", "CHM221", "PHY215"]
                 },
-                "300 level": {
-                    "first semester": ["GLY300", "GLY310", "GLY311", "GLY312", "GLY313", "GLY328", "GLY314", "GLY314"],
-                    "second semester": ["GLY301", "GLY320", "GLY321", "GLY322", "GLY324", "GLY315", "GLY325"]
+                "300": {
+                    "first": ["GLY300", "GLY310", "GLY311", "GLY312", "GLY313", "GLY328", "GLY314", "GLY314"],
+                    "second": ["GLY301", "GLY320", "GLY321", "GLY322", "GLY324", "GLY315", "GLY325"]
                 },
-                "400 level": {
-                    "first semester": ["GLY400", "GLY410", "GLY412", "GLY413", "GLY416", "GLY420", "GLY422", "GLY423", "GLY415"],
-                    "second semester": ["GLY499", "GLY417", "GLY426"]
+                "400": {
+                    "first": ["GLY400", "GLY410", "GLY412", "GLY413", "GLY416", "GLY420", "GLY422", "GLY423", "GLY415"],
+                    "second": ["GLY499", "GLY417", "GLY426"]
                 }
             }
         },
-        {
+        "mathematics": {
             "name": "Mathematics", 
             "hod": "Professor Okuonghae R. I.",
             "courses": {
-                "100 level": {
-                    "first semester": ["MTH110", "MTH112", "CHM111", "GST111", "GST112", "CHM113", "BOT111", "ZOO111", "GLY110", "PHY109", "PHY111"],
-                    "second semester": ["MTH123", "MTH125", "CSC120", "GST121", "GST122", "GST123", "CHM122", "CHM124", "ZOO123", "GLY120", "PHY124", "PHY113"]
+                "100": {
+                    "first": ["MTH110", "MTH112", "CHM111", "GST111", "GST112", "CHM113", "BOT111", "ZOO111", "GLY110", "PHY109", "PHY111"],
+                    "second": ["MTH123", "MTH125", "CSC120", "GST121", "GST122", "GST123", "CHM122", "CHM124", "ZOO123", "GLY120", "PHY124", "PHY113"]
                 },
-                "200 level": {
-                    "first semester": ["MTH210", "MTH212", "MTH213", "MTH218", "MTH219", "MTH230", "CSC212"],
-                    "second semester": ["MTH220", "MTH222", "MTH223", "MTH227", "MTH228", "MTH229", "MTH240", "MTH242"]
+                "200": {
+                    "first": ["MTH210", "MTH212", "MTH213", "MTH218", "MTH219", "MTH230", "CSC212"],
+                    "second": ["MTH220", "MTH222", "MTH223", "MTH227", "MTH228", "MTH229", "MTH240", "MTH242"]
                 },
-                "300 level": {
-                    "first semester": ["MTH310", "MTH312", "MTH313", "MTH315", "MTH316", "MTH317", "MTH330", "MTH332", "CSC313", "CED300"],
-                    "second semester": ["MTH320", "MTH322", "MTH323", "MTH325", "MTH325", "MTH328", "MTH340", "MTH342"]
+                "300": {
+                    "first": ["MTH310", "MTH312", "MTH313", "MTH315", "MTH316", "MTH317", "MTH330", "MTH332", "CSC313", "CED300"],
+                    "second": ["MTH320", "MTH322", "MTH323", "MTH325", "MTH325", "MTH328", "MTH340", "MTH342"]
                 },
-                "400 level": {
-                    "first semester": ["MTH410", "MTH432", "MTH412", "MTH413", "MTH418"],
-                    "second semester": ["MTH420", "MTH421", "MTH422", "MTH424", "MTH426", "MTH428", "MTH499"]
+                "400": {
+                    "first": ["MTH410", "MTH432", "MTH412", "MTH413", "MTH418"],
+                    "second": ["MTH420", "MTH421", "MTH422", "MTH424", "MTH426", "MTH428", "MTH499"]
                 }
             }
         },
-        {
+        "chemistry": {
             "name": "Chemistry",
             "hod": "Professor J. U. Iyasele.",
             "courses": {
-                "100 level": {
-                    "first semester": ["CHM111", "CHM133", "CHM133P", "MTH110", "MTH112", "PHY111", "PHY109", "GST111", "GST112", "PBB111"],
-                    "second semester": ["CHM122", "CHM124", "CHM122P", "MTH125", "PHY124", "GST121", "GST122", "PBB122"]
+                "100": {
+                    "first": ["CHM111", "CHM133", "CHM133P", "MTH110", "MTH112", "PHY111", "PHY109", "GST111", "GST112", "PBB111"],
+                    "second": ["CHM122", "CHM124", "CHM122P", "MTH125", "PHY124", "GST121", "GST122", "PBB122"]
                 }, 
-                "200 level": {
-                    "first semester": ["CHM205", "CHM211", "CHM213", "CHM214", "CHM215", "CHM217", "CSC212", "MTH218", "MTH230"],
-                    "second semester": ["CHM205", "CHM221", "CHM222", "CHM223", "CHM224", "CHM225", "CHM226", "CHM227", "CHM228", "PHY224"]
+                "200": {
+                    "first": ["CHM205", "CHM211", "CHM213", "CHM214", "CHM215", "CHM217", "CSC212", "MTH218", "MTH230"],
+                    "second": ["CHM205", "CHM221", "CHM222", "CHM223", "CHM224", "CHM225", "CHM226", "CHM227", "CHM228", "PHY224"]
                 },
-                "300 level": {
-                    "first semester": ["CHM310", "CHM311", "CHM312", "CHM313", "CHM314", "CHM315", "CHM316", "CHM317", "CHM318", "CHM319", "CHM331", "CED300"],
-                    "second semester": ["Industrial Training"]
+                "300": {
+                    "first": ["CHM310", "CHM311", "CHM312", "CHM313", "CHM314", "CHM315", "CHM316", "CHM317", "CHM318", "CHM319", "CHM331", "CED300"],
+                    "second": ["Industrial Training"]
                 }, 
-                "400 level": {
-                    "first semester": ["CHM405", "CHM411", "CHM412", "CHM413", "CHM414", "CHM415", "CHM416", "CHM417", "CHM418", "CHM419", "CHM499"],
-                    "second semester": ["CHM405", "CHM421", "CHM422", "CHM423", "CHM424", "CHM425", "CHM426", "CHM427", "CHM428", "CHM429", "CHM499"]
+                "400": {
+                    "first": ["CHM405", "CHM411", "CHM412", "CHM413", "CHM414", "CHM415", "CHM416", "CHM417", "CHM418", "CHM419", "CHM499"],
+                    "second": ["CHM405", "CHM421", "CHM422", "CHM423", "CHM424", "CHM425", "CHM426", "CHM427", "CHM428", "CHM429", "CHM499"]
                 }
 
             }
         },
-        {
+        "statistics": {
             "name": "Statistics",
             "hod": "Professor Ekhosuehi N.",
             "courses": {
-                "100 level": {
-                    "first semester": ["STA110", "MTH110", "MTH112", "CSC110", "PHY111", "PHY109", "GST111", "GST112", "ECO111"],
-                    "second semester": ["MTH123", "MTH125", "PHY124", "GST121", "GST122", "GST123", "ECO121", "CSC120"]
+                "100": {
+                    "first": ["STA110", "MTH110", "MTH112", "CSC110", "PHY111", "PHY109", "GST111", "GST112", "ECO111"],
+                    "second": ["MTH123", "MTH125", "PHY124", "GST121", "GST122", "GST123", "ECO121", "CSC120"]
                 },
-                "200 level": {
-                    "first semester": ["STA211", "CSC212", "MTH230", "MTH218", "MTH212", "MTH214", "STA212", "STA213", "MTH210"],
-                    "second semester": ["STA221", "STA222", "MTH228", "MTH227", "CSC220", "STA223"]
+                "200": {
+                    "first": ["STA211", "CSC212", "MTH230", "MTH218", "MTH212", "MTH214", "STA212", "STA213", "MTH210"],
+                    "second": ["STA221", "STA222", "MTH228", "MTH227", "CSC220", "STA223"]
                 },
-                "300 level": {
-                    "first semester": ["STA311", "STA312", "STA313", "MTH314", "STA331", "MTH324", "CED300"],
-                    "second semester": ["STA324", "STA321", "STA399", "STA326", "MTH328", "STA325"]
+                "300": {
+                    "first": ["STA311", "STA312", "STA313", "MTH314", "STA331", "MTH324", "CED300"],
+                    "second": ["STA324", "STA321", "STA399", "STA326", "MTH328", "STA325"]
                 },
-                "400 level": {
-                    "first semester": ["STA431", "STA412", "STA454", "STA454", "STA455", "STA456", "STA499", "STA411"],
-                    "second semester": ["STA421", "MTH427", "STA432", "STA449", "STA469", "STA422", "STA441", "STA413"]
+                "400": {
+                    "first": ["STA431", "STA412", "STA454", "STA454", "STA455", "STA456", "STA499", "STA411"],
+                    "second": ["STA421", "MTH427", "STA432", "STA449", "STA469", "STA422", "STA441", "STA413"]
                 }
             }
         }
 
-    ]
+    },
+    "lecturers": {
+        "konyeha": "Professor S. Konyeha (Mrs) is a Professor in the Computer Science Department. Her qualifications are:\nDegree - B.Sc., M.Sc., Ph.D. (Benin);\nProfessional Membership - SMIEE;\nAcademic Status - Professor;\nArea of Specialization - Software engineering, Info-tech & Hardware, Network security."
+    }
 }
