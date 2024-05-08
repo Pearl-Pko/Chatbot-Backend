@@ -5,15 +5,15 @@ from converse import ResponseGeneratorFactory
 from flask import Flask, request
 from flask_cors import CORS
 import nltk
+import os
 
 app = Flask(__name__)
-
-nltk.download('punkt')
 
 CORS(app)
 
 #loads the necessary data 
-pipeline = load("model.joblib")
+pipeline = load(os.path.join(os.environ["SHARED"], "model.joblib"))
+
 with open("data.json", "r") as file:
     intents = json.loads(file.read()) 
     
