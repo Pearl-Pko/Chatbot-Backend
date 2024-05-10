@@ -38,6 +38,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=requirements.txt,target=requirements.txt \
     python -m pip install -r requirements.txt
 
+RUN mkdir -p /usr/src/app/shared
+
 # Create a directory for NLTK data and set permissions
 RUN mkdir -p /usr/local/nltk_data && chmod a+rwx /usr/local/nltk_data
 
@@ -48,10 +50,11 @@ USER appuser
 # Copy the source code into the container.
 COPY . .
 
+
 ENV SHARED=/usr/src/app/shared
 
 # Expose the port that the application listens on.
 EXPOSE 8000
 
 # Run the application.
-CMD gunicorn 'app.main:app' --bind=0.0.0.0:8000
+CMD gunicorn  --bind=0.0.0.0:8000 app:app
