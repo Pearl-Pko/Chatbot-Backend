@@ -20,7 +20,9 @@ with open(os.path.join(os.environ["SHARED"], "data.json"), "r") as file:
 with open("course info.json", "r") as file:
     course_info = json.loads(file.read())   
 
-["Prerequisites", "Credit Load", "Course Name", "Course Status", "Level Courses", "Semester Courses", "HOD Inquiry", "Information about Lecturer"]
+["Prerequisites", "Credit Load", "Course Name", "Course Status", "Level Courses", "Semester Courses", "HOD Inquiry", "Information about Lecturer", "Course Adviser Full Time", 
+ "Course Adviser Part Time", "Course Lecturer"]
+
 intent_ids = list(zip(intents.keys(), intents.values()))
 
 @app.route("/reply", methods=["POST"])
@@ -38,4 +40,5 @@ def main():
     return {"message": res}
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", debug=True, port=5000)
+    # app.run(debug=True, port=5000)

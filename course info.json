@@ -41,6 +41,7 @@
         "csc211": {
             "name": "Structured Programming in PASCAL",
             "code": "CSC211",
+            "lecturer": ["Oliomogbe", "Igodan", "Otokiti", "Idehe"],
             "description": "CSC211 is Structured Programming in PASCAL. It delves into the foundations of structured programming, covering declarations, data types, and programming operations. Students explore the intricacies of PASCAL, including strings, pointers, list processing, and file handling.",
             "status": "Core",
             "credits": 3,
@@ -51,6 +52,7 @@
         "physics": {
             "name": "Physics",
             "hod": "Professor Osahon",
+
             "courses": {
                 "100": {
                     "first": ["PHY109", "PHY111", "PHY113", "PHY124", "GST111", "GST112", "MTH112", "MTH110", "CHM111", "CHM113", "AEB111", "CSC110"],
@@ -74,6 +76,9 @@
         "computer science": {
             "name": "Computer Science",
             "hod": "Professor Egwali A. O.",
+            "course adviser full time": {
+                "100": "Dr. (Mrs) Usiobaifo"
+            },
             "courses": {
                 "100": {
                     "first": ["CSC110", "MTH110", "MTH112", "PHY111", "CHM111", "GST111", "GST112", "CSC111", "BUS111", "PHY109", "PHY113"],

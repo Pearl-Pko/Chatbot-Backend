@@ -18,7 +18,17 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN chmod 777 /app
+# Create a non-privileged user that the app will run under.
+# See https://docs.docker.com/go/dockerfile-user-best-practices/
+ARG UID=10001
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "/nonexistent" \
+    --shell "/sbin/nologin" \
+    --no-create-home \
+    --uid "${UID}" \
+    appuser
 
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
@@ -32,17 +42,19 @@ RUN mkdir -p /usr/src/app/shared
 
 # Create a directory for NLTK data and set permissions
 RUN mkdir -p /usr/local/nltk_data && chmod a+rwx /usr/local/nltk_data
-  
+
 RUN python -m nltk.downloader punkt -d /usr/local/nltk_data
 # Switch to the non-privileged user to run the application.
+USER appuser
 
 # Copy the source code into the container.
 COPY . .
 
+
 ENV SHARED=/usr/src/app/shared
 
 # Expose the port that the application listens on.
-EXPOSE 5000
+EXPOSE 8000
 
 # Run the application.
-CMD ["python", "app.py"]
+CMD gunicorn  --bind=0.0.0.0:8000 app:app

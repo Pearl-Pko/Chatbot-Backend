@@ -126,6 +126,37 @@ class InformationAboutLecturerGenerator(NERGenerator):
         else: 
             res = f'I do not have any information about this lecturer'
         return [res]
+    
+class CourseAdviserFulltime(NERGenerator):
+    def response(self, intents, course_info, intent_tag, question):
+        question = question.lower()
+        department = re.findall(department_pattern, question)
+        level = re.findall(level_pattern, question)
+        if department and level:
+            res = f"{course_info['department'][department[0]]['course adviser full time'][level[0]]} is the course adviser for {level[0]} level in {department[0]}"
+        else:
+            if not department:
+                res = "Not a valid department"
+            else: 
+                res = "Not a valid level"
+        return [res]
+        
+
+class CourseLecturer(NERGenerator):
+    def response(self, intents, course_info, intent_tag, question):
+        question = question.lower()
+        print("yeah")
+        matches = re.findall(course_code_pattern, question)
+        if matches and matches[0] in course_info["courses"]:
+            lecturer = course_info["courses"][matches[0]]["lecturer"]
+            if len(lecturer) > 1:
+                res = f"{', '.join(lecturer)} are teaching {matches[0]}"
+            else:
+                res = f"{lecturer[0]} is teaching {matches[0]}"
+        else:
+            res = "Not a valid course code"
+        return [res]
+
 
 class ResponseGeneratorFactory(): 
     @staticmethod 
@@ -146,5 +177,9 @@ class ResponseGeneratorFactory():
             return HODInquiryGenerator()
         elif responseType == "Information about lecturer":
             return InformationAboutLecturerGenerator()
+        elif responseType == "Course Adviser Full Time":
+            return CourseAdviserFulltime()
+        elif responseType == "Course Lecturer":
+            return CourseLecturer()
         else: 
             return RuleBaseGenerator()
