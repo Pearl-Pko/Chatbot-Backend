@@ -1,23 +1,9 @@
 {
     "courses": {
-        "phy109": {
-            "name": "Practical Physics 1",
-            "code": "PHY109",
-            "description": "In this course, students engage in a minimum of 22 major experiments covering various aspects of the physics curriculum for the year.",
-            "status": "Core",
-            "credits": 3
-        },
-        "phy111": {
-            "name": "Classical Mechanics",
-            "code": "PHY111",
-            "description": "In this course, students engage in a minimum of 22 major experiments covering various aspects of the physics curriculum for the year.",
-            "status": "Core",
-            "credits": 3
-        },
         "csc110": {
             "name": "Introduction to Computing",
             "code": "CSC110", 
-            "description": "This course provides a comprehensive introduction to the world of computing. Students delve into the history of computers, understanding the functional components of a computer, and the characteristics that define them. The curriculum covers problem-solving strategies, flowcharts, algorithms, and explores the societal impact of computing technologies, addressing social, ethical, and professional considerations.",
+            "lecturer": ["Akwukwuma", "Usiobaifo", "Aziken", "Osaseri", "Izevbizua", "Evbuomwan"],
             "status": "Core",
             "credits": 3,
             "prerequisites": []
@@ -25,7 +11,7 @@
         "csc111": {
             "name": "Programming Essentials", 
             "code": "CSC111",
-            "description": "Programming Essentials is a foundational course that introduces students to system description techniques, including flowcharts, algorithms, and data flow diagrams. It explores the BASIC programming language, covering statements, symbolic names, arrays, and control statements. The course also serves as an initiation into Visual BASIC Programming Language.",
+            "lecturer": ["Odetayo", "Okhuoya"],
             "status": "Mandatory", 
             "credits": 3,
             "prerequisites": []
@@ -33,7 +19,7 @@
         "csc120": {
             "name": "Use of Packages",
             "code": "CSC120",
-            "description": "In this course, students gain insights into the aims and objectives of computer packages, understanding their structure, applications, and limitations. The practical sessions involve hands-on experience with popular packages in areas such as spreadsheet, word processing, database management, and design applications.",
+            "lecturer": ["Osubor", "Imiefoh", "Osaseri", "Evbuomwan"],
             "status": "Core", 
             "credits": 3,
             "prerequisites": []
@@ -42,11 +28,269 @@
             "name": "Structured Programming in PASCAL",
             "code": "CSC211",
             "lecturer": ["Oliomogbe", "Igodan", "Otokiti", "Idehe"],
-            "description": "CSC211 is Structured Programming in PASCAL. It delves into the foundations of structured programming, covering declarations, data types, and programming operations. Students explore the intricacies of PASCAL, including strings, pointers, list processing, and file handling.",
             "status": "Core",
             "credits": 3,
             "prerequisites": ["CSC110", "100 level Maths"]
+        }, 
+        "csc212": {
+            "name": "Symbolic Programming in FORTRAN",
+            "code": "CSC212",
+            "lecturer": ["Obasohan", "Aziken", "Igodan", "Okhuoya"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC110", "100 level Maths"]
+        },
+        "csc217": {
+            "name": "Information Technology: Design, Policy & Application",
+            "code": "CSC217",
+            "lecturer": ["Imiefoh"],
+            "status": "Mandatory",
+            "credits": 3,
+            "prerequisites": ["CSC111", "CSC110", "CSC120"]
+        },
+        "csc237": {
+            "name": "Information Interfaces & Presentation",
+            "code": "CSC237",
+            "lecturer": ["Izevbizua"],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": ["CSC111", "CSC120"]
+        },
+        "csc220": {
+            "name": "Introduction to Data Processing",
+            "code": "CSC220",
+            "lecturer": ["Egbokhare", "Usiobaifo", "Oliomogbe", "Igodan", "Izevbizua", "Okhuoya"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC110"]
+        },
+        "csc222": {
+            "name": "Assembly Language Programming I",
+            "code": "CSC222",
+            "lecturer": ["Obayagbona"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC110", "CSC211", "CSC212"]
+        },
+        "csc224": {
+            "name": "Introduction to C and C++ Programming",
+            "code": "CSC224",
+            "lecturer": ["Osubor"],
+            "status": "Mandatory",
+            "credits": 3,
+            "prerequisites": ["CSC110", "CSC211", "CSC212"]
+        },
+        "csc311": {
+            "name": "Web Technology and Applications",
+            "code": "CSC311",
+            "lecturer": ["Otokiti"],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": ["CSC220", "CSC110", "CSC212"]
+        },
+        "csc312": {
+            "name": "Assembly Lang. Programming II and C Prog",
+            "code": "CSC312",
+            "lecturer": ["Obayagbonna"],
+            "status": "Mandatory",
+            "credits": 3,
+            "prerequisites": ["CSC110", "CSC212", "CSC211"]
+        },
+        "csc333": {
+            "name": "Human Computer Interaction",
+            "code": "CSC333",
+            "lecturer": ["Egwali"],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": ["CSC222", "CSC220"]
+        },
+        "csc313": {
+            "name": "Data Structure & Information Manipulation",
+            "code": "CSC313",
+            "lecturer": ["Oliomogbe"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC220", "CSC212", "CSC211"]
+        },
+        "csc314": {
+            "name": "Operations Research",
+            "code": "CSC314",
+            "lecturer": ["A. A. Osagiede"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["MTH230", "CSC212"]
+        },
+        "csc316": {
+            "name": "Introduction To Digital Design and Micro-processors",
+            "code": "CSC316",
+            "lecturer": ["Osaseri"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["PHY224", "CSC211", "CSC212"] 
+        },
+        "csc318": {
+            "name": "Formal Languages and Automata Theory",
+            "code": "CSC318",
+            "lecturer": ["Nwelih"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC220", "CSC211"] 
+        },
+        "csc321": {
+            "name": "Systems Analysis and Design",
+            "code": "CSC321",
+            "lecturer": ["Osubor", "Chete"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC220", "CSC212", "CSC313"]
+        },
+        "csc323": {
+            "name": "Economics of Information Technology",
+            "code": "CSC323",
+            "lecturer": ["Imiefoh"],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": []
+        },
+        "csc325": {
+            "name": "Compiler Construction",
+            "code": "CSC325",
+            "lecturer": ["Osagie"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC312", "CSC318"]
+        },
+        "csc328": {
+            "name": "Discrete Mathematics, Network and Graph Theory",
+            "code": "CSC328",
+            "lecturer": ["Egwali"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["MTH230", "CSC211", "CSC212"]
+        },
+        "csc419": {
+            "name": "Research Seminar",
+            "code": "CSC419",
+            "lecturer": [],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC329"]
+        },
+        "csc411": {
+            "name": "Operating System",
+            "code": "CSC411",
+            "lecturer": ["Aziken"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC220", "CSC312", "CSC326"]
+        },
+        "csc413": {
+            "name": "Database Management Systems",
+            "code": "CSC413",
+            "lecturer": ["Egbokhare"],
+            "status": "Mandatory",
+            "credits": 3,
+            "prerequisites": ["CSC313", "CSC321"]
+        },
+        "csc418": {
+            "name": "Design and Analysis of Algorithms",
+            "code": "CSC418",
+            "lecturer": ["Obasohan"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC211", "CSC313", "CSC321"]
+        },
+        "csc424": {
+            "name": "Simulation and Probability Models in OR",
+            "code": "CSC424",
+            "lecturer": [],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": ["CSC314", "MTH319", "CSC328"]
+        },
+        "csc421": {
+            "name": "Software Engineering",
+            "code": "CSC421",
+            "lecturer": ["Akwukwuma"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC211", "CSC212", "CSC218", "CSC321"]
+        },
+        "csc428": {
+            "name": "Graph Theory and Applications",
+            "code": "CSC421",
+            "lecturer": ["Egwali"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["CSC211", "CSC313", "CSC328"]
+        },
+        "csc432": {
+            "name": "Systems Programming",
+            "code": "CSC421",
+            "lecturer": ["Nwelih"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites":  ["CSC222", "CSC312", "CSC326"]
+        },
+        "csc499": {
+            "name": "Project",
+            "code": "CSC499",
+            "lecturer": [],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites": ["400 Level standing", "CSC419"]
+        },
+        "csc414": {
+            "name": "Management Science",
+            "code": "CSC414",
+            "lecturer": ["Usiobaifo"],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": ["CSC212", "CSC321", "CSC314"]
+        },
+        "csc412": {
+            "name": "Advanced Programming Concepts",
+            "code": "CSC412",
+            "lecturer": [],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": ["CSC211", "CSC212", "CSC313"]
+        },
+        "csc415": {
+            "name": "Artificial Intelligence",
+            "code": "CSC415",
+            "lecturer": ["Osagie"],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites": ["CSC313"]
+        },
+        "csc426": {
+            "name": "Advanced Digital Computer Design",
+            "code": "CSC426",
+            "lecturer": ["Konyeha"],
+            "status": "Elective",
+            "credits": 3,
+            "prerequisites":  ["CSC316", "CSC326", "CSC346"]
+        },
+        "csc422": {
+            "name": "Concept of Programming Languages",
+            "code": "CSC426",
+            "lecturer": ["Ekuobase", "Oliha"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites":  ["CSC311"]
+        },
+        "csc427": {
+            "name": "Concept of Programming Languages",
+            "code": "CSC427",
+            "lecturer": ["Imouokhome"],
+            "status": "Core",
+            "credits": 3,
+            "prerequisites":  ["CSC313", "CSC328"]
         }
+
+
+
     },
     "department": {
         "physics": {
@@ -77,8 +321,38 @@
             "name": "Computer Science",
             "hod": "Professor Egwali A. O.",
             "course adviser full time": {
-                "100": "Dr. (Mrs) Usiobaifo"
+                "100": "Dr. (Mrs) Usiobaifo", 
+                "200": ["Mr. I. E. Obayagbonna"],
+                "300": ["Dr. (Mrs) Aziken"],
+                "400": ["Dr. E. Nwelih", "Mr. E. Igodan", "Mr. I. Evbuomwan"]
             },
+            "course adviser part time": {
+                "100": ["Mr. I. E. Obayagbonna"], 
+                "200": ["Mr. K. Otokiti"],
+                "300": ["Mr. E. Igodan"],
+                "400": ["Mr. B. Odetayo"],
+                "500": ["Mrs. Izevbizua"],
+                "600": ["Mr. J. Okhuoya "]
+            },
+            "Post Graduate coordinator": "Dr. (Mrs) R Usiobaifo",
+            "Post Graduate Assistant (Year 1)": "Mr. Okhuoya", 
+            "Post Graduate Assistant (Year 2)": "Dr. (Mrs) R Usiobaifo",
+            "Part time coordinator": "Mr. S. O. P. Oliomogbe",
+            "Time-Table Officer": ["Mr. Obayagbonna"],
+            "Examination Officer": ["Mr. Obasohan", "Mr. Idehen"],
+            "Transcript Officer": ["Prof. G. O. Ekuobase"],
+            "Students Guidance/Counselling": ["Prof. (Mrs) Akwukwuma"],
+            "UBITS Coordinator": ["Dr. (Mrs.) G. O. Aziken"],
+            "Records Officer /Library": ["Prof. (Mrs.)A. O. Egwali"],
+            "Staff Monitoring": ["Prof. (Mrs) V.V. N. Akwukwuma"],
+            "Departmental Chief Whip": ["Prof. (Mrs) F. A. Egbokhare"],
+            "Welfare Officer": ["Mrs. R. Izevbizua"],
+            "NACOSS Staff Adviser": ["Mr. Otokiti"],
+            "Business Editor (BJACS)": ["Dr. E. Nwelih"],
+            "Conferences/Workshops": ["Prof. (Mrs.) Osubor"],
+            "Student’s Practical / Lab": ["Prof. (Mrs.) Konyeha"],
+            "Seminar/Project Coordinator": ["Prof. Akwukwuma", "Mr. Okhuoya"],
+            "Staff Seminar/Special Assignment": ["Prof. (Mrs) F. A. Egbokhare"],
             "courses": {
                 "100": {
                     "first": ["CSC110", "MTH110", "MTH112", "PHY111", "CHM111", "GST111", "GST112", "CSC111", "BUS111", "PHY109", "PHY113"],
