@@ -12,9 +12,9 @@ app = Flask(__name__)
 CORS(app)
 
 #loads the necessary data 
-pipeline = load(os.path.join(os.environ["SHARED"], "model.joblib"))
+pipeline = load(os.path.join(".", "model.joblib"))
 
-with open(os.path.join(os.environ["SHARED"], "data.json"), "r") as file:
+with open(os.path.join(".", "data.json"), "r") as file:
     intents = json.loads(file.read()) 
     
 with open("course info.json", "r") as file:
